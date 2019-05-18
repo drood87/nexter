@@ -37,4 +37,15 @@ body {
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+	grid-template-columns:
+		[sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(
+			8,
+			[col-start] minmax(min-content, 14rem) [col-end]
+		)
+		[center-end] 1fr [full-end]; // use the 1 fr on left and right to center the 8 columns but we can also utilize those if we want to break out of the 8 columns for different content
+
+	& > * {
+		padding: 40px;
+		font-size: 3rem;
+	}
 }
