@@ -14,7 +14,7 @@ $color-grey-dark-2: #6d5d4b;
 
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px/16 = 62.5em
-// $bp-md: ;
+$bp-medium: 50em; //800px/16 = 50em
 // $bp-small: ;
 
 // FONT VARIABLES
@@ -62,5 +62,9 @@ body {
 			[full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 			[center-end] minmax(6rem, 1fr)
 			[full-end];
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
 	}
 }
