@@ -15,7 +15,7 @@ $color-grey-dark-2: #6d5d4b;
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px/16 = 62.5em
 $bp-medium: 50em; //800px/16 = 50em
-// $bp-small: ;
+$bp-small: 37.5em; //600px
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -65,6 +65,6 @@ body {
 	}
 
 	@media only screen and (max-width: $bp-medium) {
-		grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+		grid-template-rows: 6rem calc(100vh - 6rem); // rest is in implicit grid and styled based on the content we don't need to define min-content
 	}
 }
